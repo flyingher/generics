@@ -4,13 +4,22 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class Demo {
+	@Test
+	public void test4() {
+		List<Object> objs = Arrays.<Object> asList("one", 2, 3.14, 4);
+		List<Integer> ints = Arrays.asList(2, 4);
+		Assert.assertTrue(objs.contains("one"));
+		Assert.assertTrue(objs.containsAll(ints));
+	}
 
 	/**
-	 * The Get and Put Principle: use an extends wildcard when you only get values out of a structure, use a super
-	 * wildcard when you only put values into a structure, and don’t use a wildcard when you both get and put.
+	 * The Get and Put Principle: use an extends wildcard when you only get
+	 * values out of a structure, use a super wildcard when you only put values
+	 * into a structure, and don’t use a wildcard when you both get and put.
 	 */
 	@Test
 	public void test3() {
@@ -32,7 +41,8 @@ public class Demo {
 
 	@Test
 	public void test() {
-		String integerCacheHighPropValue = sun.misc.VM.getSavedProperty("java.lang.Integer.IntegerCache.high");
+		String integerCacheHighPropValue = sun.misc.VM
+				.getSavedProperty("java.lang.Integer.IntegerCache.high");
 		System.out.println(integerCacheHighPropValue);
 		System.out.println(Math.exp(1));
 		System.out.println(Math.log(Math.E));
