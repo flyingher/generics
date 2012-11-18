@@ -1,5 +1,6 @@
 package com.flyingh.generics;
 
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +9,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Demo {
+	@Test
+	public void test5(){
+		Method[] methods = Integer.class.getMethods();
+		for (Method method : methods) {
+			if("compareTo".equals(method.getName())){
+				System.out.println(method.toGenericString());
+			}
+		}
+		System.out.println(Arrays.asList(methods));
+		
+	}
+	
 	@Test
 	public void test4() {
 		List<Object> objs = Arrays.<Object> asList("one", 2, 3.14, 4);
