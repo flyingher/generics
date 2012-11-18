@@ -10,6 +10,16 @@ import org.junit.Test;
 
 public class Demo {
 	@Test
+	public void test6(){
+		System.out.println(new int[]{});
+		System.out.println(new float[]{});
+		System.out.println(new char[]{});
+		System.out.println(new byte[]{});
+		System.out.println(new Integer[]{});
+		System.out.println(new String[]{});
+	}
+	
+	@Test
 	public void test5(){
 		Method[] methods = Integer.class.getMethods();
 		for (Method method : methods) {
