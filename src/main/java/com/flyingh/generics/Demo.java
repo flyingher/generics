@@ -10,6 +10,12 @@ import org.junit.Test;
 
 public class Demo {
 	@Test
+	public void test7(){
+		Assert.assertTrue(Integer.class.isInstance(1));
+		Assert.assertTrue(Integer.class instanceof Class);
+	}
+	
+	@Test
 	public void test6(){
 		System.out.println(new int[]{});
 		System.out.println(new float[]{});
