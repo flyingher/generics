@@ -1,5 +1,6 @@
 package com.flyingh.generics;
 
+import java.lang.annotation.Retention;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,6 +14,7 @@ public class Demo {
 	public void test7(){
 		Assert.assertTrue(Integer.class.isInstance(1));
 		Assert.assertTrue(Integer.class instanceof Class);
+		System.out.println(Retention.class.getAnnotation(Retention.class));
 	}
 	
 	@Test
